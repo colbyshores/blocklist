@@ -1,0 +1,8 @@
+#!/usr/bin/ruby
+begin
+  a = File.readlines("#{File.expand_path(File.dirname(__FILE__))}/conf/blocklist.conf")
+  b = File.readlines("#{ARGV[0]}")
+  puts b.select{|e, c| [e, a.count(e)] }.uniq
+rescue
+  puts 'path or source file not specified'
+end
