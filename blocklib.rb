@@ -63,7 +63,7 @@ watchlist.each do |ipaddresses|
         end
       end
       listed = []
-      sleep(24000) #check once an hour, 2400 seconds being 1 hour.
+      sleep(3600) #check once an hour, 3600 seconds being 1 hour.
     end
   }
 end
