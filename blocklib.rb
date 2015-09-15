@@ -32,7 +32,7 @@ def blocklists(ip)
       listed = []
       lists.each do |list|
         begin
-          host = check+'.'+list[0..-2]
+          host = check+'.'+list
           Resolv::getaddress("#{host}"[0..-2])
           listed << list
         rescue Exception => e
